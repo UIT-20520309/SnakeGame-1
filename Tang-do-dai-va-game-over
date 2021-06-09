@@ -1,0 +1,30 @@
+ void TangDoDai(int Huong) {
+        A[DoDai] = A[DoDai - 1];
+        this->DiChuyen(Huong);
+        this->DoDai++;
+    }
+    int GetHeadX()
+    {
+        return A[0].x;
+    }
+    int GetHeadY()
+    {
+        return A[0].y;
+    }
+    bool ktTuDam()
+    {
+        int a, b;
+        a = A[0].x;
+        b = A[0].y;
+        for (int i = 1; i < DoDai; i++)
+            if ((A[i].x == a) && (A[i].y == b))
+                return true;
+        return false;
+    }
+};
+bool GameOver(CONRAN r)
+{
+    if (r.GetHeadX() == 9 || r.GetHeadX() == 119 || r.GetHeadY() == 0 || r.GetHeadY() == 29)
+        return true;
+    return r.ktTuDam();
+}
