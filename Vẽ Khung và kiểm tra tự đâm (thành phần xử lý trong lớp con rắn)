@@ -1,0 +1,28 @@
+void VeKhung()
+{
+    for (int i = 9; i <= 119; i++)
+    {
+        gotoxy(i, 0);
+        cout << (char)219;
+        gotoxy(i, 29);
+        cout << (char)219;
+    }
+    for (int i = 0; i <= 29; i++)
+    {
+        gotoxy(119, i);
+        cout << (char)219;
+        gotoxy(9, i);
+        cout << (char)219;
+    }
+}
+
+bool ktTuDam()
+    {
+        int a, b;
+        a = A[0].x;
+        b = A[0].y;
+        for (int i = 1; i < DoDai; i++)
+            if ((A[i].x == a) && (A[i].y == b))
+                return true;
+        return false;
+    }
